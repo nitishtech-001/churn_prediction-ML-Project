@@ -56,7 +56,7 @@ python3 app.py
 ```
 ## To run the Notebook you have to uncommit the module or library name
 example 1:
-# matplotlib==3.9.0 
+#matplotlib==3.9.0 
 after uncommit
 matplotlib==1.0.0
 then again run the pip install -r requiremets.txt
