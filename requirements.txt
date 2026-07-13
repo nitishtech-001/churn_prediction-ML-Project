@@ -1,32 +1,18 @@
 # Core ML & Data Processing
 pandas==2.2.0
-numpy==1.26.3
-scikit-learn==1.5.0
-xgboost==2.1.0
-catboost==1.2.5
+#numpy==1.26.3
+#scikit-learn==1.5.0
+#xgboost==2.1.0
+#catboost==1.2.5
 
 # Visualization
-plotly==5.24.0
-matplotlib==3.9.0
-seaborn==0.13.2
+#plotly==5.24.0
+#matplotlib==3.9.0
+#seaborn==0.13.2
 
 # Streamlit Dashboard
 streamlit==1.35.0
 streamlit-option-menu==0.3.13
 
-# MLflow for experiment tracking
-mlflow==2.13.0
-
-# Data validation & profiling
-pydantic==2.7.0
-ydata-profiling
-
-# Feature engineering
-feature-engine==1.8.0
-
-# SHAP for explainability
-shap==0.45.0
-
 # Utils
 joblib==1.4.0
-python-dotenv==1.0.1
