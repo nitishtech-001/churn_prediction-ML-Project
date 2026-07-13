@@ -4,7 +4,7 @@ import joblib
 
 # 1. Page Configuration
 st.set_page_config(
-    page_title="Employee Churn Predictor",
+    page_title="Customer Churn Predictor",
     page_icon="📊",
     layout="wide"
 )
@@ -22,14 +22,14 @@ def load_prediction_model():
 model = load_prediction_model()
 
 # 3. Main Dashboard Header Layout
-st.title("📊 Employee Churn Analysis & Risk Prediction")
-st.markdown("Enter employee parameters in the sidebar to run real-time attrition risk assessments.")
+st.title("📊 Customer Churn Analysis & Risk Prediction")
+st.markdown("Enter customer parameters in the sidebar to run real-time attrition risk assessments.")
 st.divider()
 
 # 4. Sidebar Inputs (Customize these fields based on your actual DataFrame columns)
-st.sidebar.header("👤 Employee Profile Input")
+st.sidebar.header("👤 Customer Profile Input")
 
-with st.sidebar.form(key='employee_form'):
+with st.sidebar.form(key='customer_form'):
 
     st.text("Default Year: 2025")
     st.text("CustomerId and Surname does not takes because it does not impact on the chrun customers")
@@ -108,9 +108,9 @@ if model is not None:
         if risk_percentage >= 70:
             st.error("💡 **Retention Action Needed:** This profile exhibits high turnover probability patterns. Consider conducting a stay interview, evaluating salary benchmarks, or reviewing commute difficulties.")
         elif risk_percentage >= 35:
-            st.warning("💡 **Monitoring Recommended:** Employee shows moderate signs of attrition risk. Ensure standard engagement and check-ins are active.")
+            st.warning("💡 **Monitoring Recommended:** Customer shows moderate signs of attrition risk. Ensure standard engagement and check-ins are active.")
         else:
-            st.success("💡 **Stable Profile:** Employee risk match factors are consistent with stable, high-retention profiles inside the dataset.")
+            st.success("💡 **Stable Profile:** Customer risk match factors are consistent with stable, high-retention profiles inside the dataset.")
 
 else:
-    st.info("💡 Please ensure your trained model file is named 'final_turnover_model.pkl' and matches your feature definitions.")
+    st.info("💡 Please ensure your trained model file is named 'Models/churn_prediction.pkl' and matches your feature definitions.")
